@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   SafeAreaView,
   View,
@@ -23,8 +23,18 @@ const TooltipText = styled.Text`
   color: ${props => props.error ? "red" : "black"};
 `;
 
+const DefaultFontText = styled.Text`
+  font-size: 36px;
+`;
+
+const CustomFontText = styled.Text`
+  font-size: 36px;
+  fontFamily: DINNextLTPro-Bold;
+`;
+
 const App = () => {
   const [tooltipVisibility, setTooltipVisibility] = useState(false);
+  const [posts, setPosts] = useState([]);
 
   const toggleTooltip = async () => {
     setTooltipVisibility(!tooltipVisibility);
@@ -36,11 +46,16 @@ const App = () => {
     }
   };
 
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(posts => setPosts(posts.slice(0, 5)))
+  }, []);
+
   return (
     <>
       <SafeAreaView>
-        <View >
-
+        <View>
           <Button onPress={toggleTooltip} title="Toggle tooltip" testID="toggle"/>
 
           {tooltipVisibility && (
@@ -51,6 +66,27 @@ const App = () => {
             </Tooltip>
           )}
         </View>
+
+        <DefaultFontText>
+          Text
+        </DefaultFontText>
+
+        <CustomFontText>
+          Text
+        </CustomFontText>
+
+        <View>
+          {posts?.map((item) => {
+            return (
+              <View>
+                <Text>
+                  {item.id} - {item.title}
+                </Text>
+              </View>
+            )
+          })}
+        </View>
+
       </SafeAreaView>
     </>
   );

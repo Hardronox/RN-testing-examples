@@ -20,6 +20,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		84702FC9FDBF085DAAE35FC7 /* libPods-KekProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E821B78CAA9D590A28EE69 /* libPods-KekProject-tvOS.a */; };
 		9B2E636056A1A93ED3429746 /* libPods-KekProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58ACF1B2A0F82C4F4C346D28 /* libPods-KekProject-tvOSTests.a */; };
+		6B7E7051E3C54B04B026B530 /* DINNextLTPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB1AB5E91FCB43699377C9E3 /* DINNextLTPro-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F842911B9B0442D94D3224A7 /* Pods-KekProject-KekProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KekProject-KekProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-KekProject-KekProjectTests/Pods-KekProject-KekProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB1AB5E91FCB43699377C9E3 /* DINNextLTPro-Bold.ttf */ = {isa = PBXFileReference; name = "DINNextLTPro-Bold.ttf"; path = "../assets/fonts/DINNextLTPro-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				FF112C1C89284B3EEA098023 /* Pods */,
+				450D0D0E7730494EB59502D5 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +200,15 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		450D0D0E7730494EB59502D5 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				BB1AB5E91FCB43699377C9E3 /* DINNextLTPro-Bold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -342,6 +354,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				6B7E7051E3C54B04B026B530 /* DINNextLTPro-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
